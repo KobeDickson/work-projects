@@ -4,8 +4,5 @@ This folder contains the Agentic Sales Prospecting tool: scripts, notes, and res
 
 ## Contents
 
-- scripts/ — automation scripts and helpers
-- data/ — sample data, templates, or exports
-- docs/ — design notes, usage instructions, and architecture
-- examples/ — example runs and demo outputs
+TO BE UPDATED
 
