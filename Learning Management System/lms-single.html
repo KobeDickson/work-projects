@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SDR Onboarding: Staffing Industry Deep Dive - training modules and quizzes for Sales Development Representatives.">
+    <title>Staffing Industry LMS for SDRs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+        .module-content ol { list-style-type: decimal; margin-left: 1.5rem; }
+        .module-content ul { list-style-type: disc; margin-left: 1.5rem; }
+        :focus { outline: 3px solid rgba(59,130,246,0.5); outline-offset: 2px; }
+        .skip-link { position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden; }
+        .skip-link:focus { position:static; left:0; width:auto; height:auto; background: #fff; padding:8px; border-radius:4px; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <a class="skip-link" href="#content-area">Skip to content</a>
+
+    <div id="lms-container" class="max-w-4xl mx-auto p-4 md:p-8">
+        <header class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h1 class="text-3xl font-bold text-gray-900">SDR Onboarding: Staffing Industry Deep Dive</h1>
+            <p class="text-gray-600 mt-2">A foundational training program to equip new Sales Development Representatives with essential industry knowledge.</p>
+        </header>
+
+        <nav id="module-navigation" class="bg-white shadow-md rounded-lg p-6 mb-8" aria-label="Module navigation">
+            <h2 class="text-xl font-semibold mb-4">Modules</h2>
+            <ul id="module-list" class="space-y-2">
+                <!-- Module links will be dynamically generated here -->
+            </ul>
+        </nav>
+
+        <main id="content-area">
+            <!-- Modules will be dynamically loaded here -->
+        </main>
+
+    </div>
+
+    <script>
+        const lmsData = [
+            {
+                id: 1,
+                title: "Module 1: Intro to the Staffing Industry",
+                content: `
+                    <h3 class="text-2xl font-semibold mb-4">Welcome to the World of Staffing!</h3>
+                    <p class="mb-4">The staffing industry is a dynamic and critical part of the modern economy. At its core, the industry connects companies that have job openings with people who are looking for work. This can be for temporary positions, permanent roles, or specialized projects.</p>
+                    <p class="mb-4">Think of staffing agencies as matchmakers for the professional world. Companies (their clients) pay them to find qualified candidates to fill their needs, saving them time and resources in the hiring process.</p>
+                    
+                    <h4 class="text-xl font-semibold mt-6 mb-3">Deep Dive: Key Staffing Models</h4>
+                    <div class="space-y-4">
+                        <div>
+                            <h5 class="font-semibold text-lg">Temporary Staffing (Contract)</h5>
+                            <p class="text-gray-700 ml-4">This is the bread and butter for many staffing firms. Companies need to quickly bring in talent for a defined period.
+                            <br><strong>Common Scenarios:</strong> Covering for a maternity leave, handling a seasonal rush (like tax season for accountants), or bringing in specific expertise for a 6-month project.
+                            <br><strong>How they make money:</strong> The firm pays the temporary employee an hourly rate (e.g., $40/hr) and bills the client a higher rate (e.g., $60/hr). The difference ($20/hr) is their gross margin or "spread".</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-lg">Permanent Placement (Direct Hire)</h5>
+                            <p class="text-gray-700 ml-4">Here, the firm functions like a traditional headhunter. The client has a full-time, permanent opening on their team.
+                            <br><strong>Common Scenarios:</strong> A company needs a new VP of Marketing, a Senior Software Engineer, or a specialized Financial Analyst. They don't have the time or internal resources to find the right person.
+                            <br><strong>How they make money:</strong> They charge the client a one-time fee, typically calculated as a percentage of the candidate's first-year salary. For example, if they place a candidate with a $100,000 salary at a 20% fee, their revenue is $20,000.</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-lg">Contract-to-Hire</h5>
+                            <p class="text-gray-700 ml-4">This model offers the ultimate flexibility for both the client and the candidate. It's a "try before you buy" scenario.
+                            <br><strong>Common Scenarios:</strong> A company thinks they need a permanent employee but isn't 100% sure, or the budget is tight. They bring a candidate on contract for 3-6 months. If it's a great fit, they can convert them to a permanent employee.
+                            <br><strong>How they make money:</strong> They earn a spread during the contract portion. If the client decides to hire the candidate permanently, they will often pay a "buy-out" or "conversion" fee.</p>
+                        </div>
+                         <div>
+                            <h5 class="font-semibold text-lg">Managed Service Provider (MSP)</h5>
+                            <p class="text-gray-700 ml-4">This is a more complex, high-level solution for large companies. The MSP acts as the central point of contact for managing a client's entire contingent (temporary) workforce.
+                            <br><strong>Common Scenarios:</strong> A large corporation works with 20-30 different staffing agencies. It's chaotic. They hire an MSP to streamline everything: vendor management, billing, onboarding, and reporting. The MSP will then work with other staffing firms to fill the roles.
+                            <br><strong>Your Role (SDR):</strong> You typically wouldn't sell an MSP solution, but you will often work with them to get your candidates into their client companies.</p>
+                        </div>
+                        <div>
+                            <h5 class="font-semibold text-lg">Recruitment Process Outsourcing (RPO)</h5>
+                            <p class="text-gray-700 ml-4">An RPO is when a company hands over all or part of its permanent hiring process to an outside firm. The RPO provider essentially becomes their internal recruiting team.
+                            <br><strong>Common Scenarios:</strong> A fast-growing startup needs to hire 50 sales reps in 6 months. Their small HR team can't handle it. They hire an RPO provider to manage the entire process from sourcing to onboarding.
+                            <br><strong>How they make money:</strong> RPO models vary but often include a monthly management fee plus a fee per hire.</p>
+                        </div>
+                    </div>
+
+                    <h4 class="text-xl font-semibold mt-6 mb-3">Why Do Companies Use Staffing Agencies?</h4>
+                     <ol class="space-y-2 list-decimal pl-5">
+                        <li><strong>Access to Talent:</strong> They have networks and databases of candidates that companies can't easily access.</li>
+                        <li><strong>Speed:</strong> They can fill roles much faster than a company's internal HR team.</li>
+                        <li><strong>Flexibility:</strong> Allows companies to scale their workforce up or down quickly without the overhead of hiring permanent employees.</li>
+                        <li><strong>Expertise:</strong> They are specialists in recruiting and understand the job market deeply.</li>
+                    </ol>
+                `,
+                quiz: {
+                    title: "Module 1 Quiz",
+                    questions: [
+                        { question: "What is the primary function of a staffing agency?", options: ["To provide payroll services to companies.", "To connect companies with job seekers for various roles.", "To offer management consulting services.", "To conduct employee training programs."], answer: "To connect companies with job seekers for various roles." },
+                        { question: "How do staffing firms typically make money on a permanent placement?", options: ["A percentage of the candidate's first-year salary.", "A recurring monthly retainer.", "An hourly spread.", "A flat fee per interview conducted."], answer: "A percentage of the candidate's first-year salary." },
+                        { question: "What does 'Contract-to-Hire' mean?", options: ["The candidate signs a long-term contract directly with the staffing agency.", "A candidate is hired permanently from day one.", "A candidate starts as a temporary employee with the potential to become a permanent hire.", "The client pays a fee to break a contract with a candidate."], answer: "A candidate starts as a temporary employee with the potential to become a permanent hire." }
+                    ]
+                }
+            },
+            {
+                id: 2,
+                title: "Module 2: Key Personas in Staffing Firms",
+                content: `
+                    <h3 class="text-2xl font-semibold mb-4">Identifying Key Contacts Inside a Staffing Firm</h3>
+                    <p class="mb-4">As an SDR for <strong>Carv</strong>, your goal is to connect with people inside staffing firms who are looking for a competitive edge. We sell a technology platform that makes their recruiters faster and more effective. Targeting the right person with the right message is critical.</p>
+                    
+                    <h4 class="text-xl font-semibold mt-6 mb-3">Tier 1: The Decision-Makers & Budget Holders</h4>
+                    <p class="mb-4">These individuals have the authority to invest in new technology like Carv.</p>
+                    <ul class="space-y-3 list-disc pl-5">
+                        <li>
+                            <strong>CEO / Owner / President:</strong> 
+                            <p class="text-sm text-gray-600 pl-4"><strong>Why:</strong> They care about the bottom line: profitability, market share, and long-term growth.
+                            <br><strong>Your Angle:</strong> Talk about ROI, gaining a competitive advantage, and improving overall firm productivity.</p>
+                        </li>
+                        <li>
+                            <strong>COO / VP of Operations:</strong>
+                            <p class="text-sm text-gray-600 pl-4"><strong>Why:</strong> They are obsessed with efficiency and process improvement. They want their teams to work smarter, not harder.
+                            <br><strong>Your Angle:</strong> Focus on how Carv streamlines workflows, reduces manual tasks for recruiters, and improves key metrics like 'time to fill'.</p>
+                        </li>
+                        <li>
+                            <strong>VP of Recruiting / Director of Delivery:</strong>
+                            <p class="text-sm text-gray-600 pl-4"><strong>Why:</strong> This person leads the recruiting team. Their bonus is often tied to the team's placement numbers. They feel the pain of hard-to-fill roles and recruiters being bogged down.
+                            <br><strong>Your Angle:</strong> Show how Carv helps recruiters find better candidates faster, improves submittal quality, and ultimately helps them make more placements.</p>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-xl font-semibold mt-6 mb-3">Tier 2: The Influencers & Champions</h4>
+                     <p class="mb-4">These individuals might not sign the contract, but their opinion is highly valued by the decision-makers.</p>
+                    <ul class="space-y-3 list-disc pl-5">
+                        <li>
+                            <strong>Recruiting Manager / Team Lead:</strong> 
+                            <p class="text-sm text-gray-600 pl-4"><strong>Why:</strong> They manage recruiters day-to-day and have a direct line of sight into process bottlenecks. They can become your biggest internal champion if they believe Carv will help their team succeed.
+                            <br><strong>Your Angle:</strong> Offer a demo focused on the specific challenges their team faces.</p>
+                        </li>
+                        <li>
+                            <strong>Director of IT / Technology:</strong>
+                            <p class="text-sm text-gray-600 pl-4"><strong>Why:</strong> They will need to vet any new technology for security, privacy, and integration with their existing systems (like their Applicant Tracking System - ATS).
+                            <br><strong>Your Angle:</strong> Be prepared to talk about data security, easy implementation, and how Carv integrates with their current tech stack.</p>
+                        </li>
+                    </ul>
+
+                     <h4 class="text-xl font-semibold mt-6 mb-3">Your Outreach Strategy</h4>
+                     <p>Tailor your message! A CEO cares about ROI and competitive advantage. A VP of Recruiting cares about recruiter productivity and hitting placement goals. An IT Director cares about security and seamless integration.</p>
+                `,
+                quiz: { title: "Module 2 Quiz", questions: [ { question: "When selling Carv to a staffing firm, who is most concerned with overall profitability and gaining a competitive advantage?", options: ["A Junior Recruiter","The CEO or Owner","An IT Support Specialist","The Payroll Manager"], answer: "The CEO or Owner" }, { question: "You want to demonstrate how Carv makes recruiters more efficient. Who is the BEST operational leader to target?", options: ["The Chief Financial Officer (CFO)","The VP of Recruiting or Director of Delivery","The Head of Marketing","The Office Manager"], answer: "The VP of Recruiting or Director of Delivery" }, { question: "Why is the Director of IT an important influencer in the sales process?", options: ["They manage the recruiting budget.","They will evaluate Carv's security and integration capabilities.","They interview and hire all new recruiters.","They are the final decision-maker on all purchases."], answer: "They will evaluate Carv's security and integration capabilities." } ] }
+            },
+            {
+                id: 3,
+                title: "Module 3: How Staffing Firms Measure Success (Key Metrics)",
+                content: `
+                    <h3 class="text-2xl font-semibold mb-4">How Staffing Firms Keep Score: Key Metrics</h3>
+                    <p class="mb-4">The staffing industry is data-driven. Understanding these key performance indicators (KPIs) is crucial for you to understand what drives their business. These metrics tell the story of their sales and recruiting process and highlight areas where Carv can have a major impact.</p>
+                    
+                    <h4 class="text-xl font-semibold mt-6 mb-3">Activity & Efficiency Metrics:</h4>
+                    <ul class="space-y-3 list-disc pl-5">
+                        <li>
+                            <strong>Time to Fill:</strong>
+                            <p class="text-sm text-gray-600 pl-4">The number of days from when a job order is opened to when a candidate accepts an offer. A lower time to fill is better, as it shows the firm is quickly meeting its client's needs.</p>
+                        </li>
+                        <li>
+                            <strong>Submit-to-Interview Ratio:</strong>
+                            <p class="text-sm text-gray-600 pl-4">The ratio of candidates a firm submits to a client versus how many are selected for an interview. A low ratio (e.g., 3:1 - 3 submittals for 1 interview) is excellent. It means they are sending high-quality, relevant candidates and not wasting the client's time.</p>
+                        </li>
+                         <li>
+                            <strong>Interview-to-Offer Ratio:</strong>
+                            <p class="text-sm text-gray-600 pl-4">The ratio of candidates who complete an interview versus how many receive a job offer. This metric helps gauge the quality of their candidates and how well they perform in interviews.</p>
+                        </li>
+                         <li>
+                            <strong>Offer-to-Acceptance Ratio:</strong>
+                            <p class="text-sm text-gray-600 pl-4">The percentage of job offers that are accepted by candidates. A high ratio indicates that the firm is good at closing candidates and managing their expectations throughout the process.</p>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-xl font-semibold mt-6 mb-3">Financial Metrics:</h4>
+                    <ul class="space-y-3 list-disc pl-5">
+                        <li>
+                            <strong>Spread / Margin (for Temp/Contract):</strong> 
+                            <p class="text-sm text-gray-600 pl-4">This is their profit on temporary placements. It's the difference between what they bill the client and what they pay the employee (Bill Rate - Pay Rate). This is usually measured per hour and is a critical indicator of profitability.</p>
+                        </li>
+                        <li>
+                            <strong>Placement Fee (for Direct Hire):</strong>
+                            <p class="text-sm text-gray-600 pl-4">The one-time fee for a permanent placement, calculated as a percentage of the candidate's annual salary. This is the primary revenue driver for the direct hire side of their business.</p>
+                        </li>
+                    </ul>
+                `,
+                quiz: { title: "Module 3 Quiz", questions: [ { question: "If you submit 6 candidates for a job and 2 get an interview, what is your Submit-to-Interview ratio?", options: ["6:2","2:6","3:1","1:3"], answer: "3:1" }, { question: "A staffing firm bills a client $75/hour for a contractor and pays the contractor $50/hour. What is the hourly spread?", options: ["$125","$75","$50","$25"], answer: "$25" }, { question: "Which metric measures the speed of the recruitment process from start to finish?", options: ["Spread / Margin","Time to Fill","Offer-to-Acceptance Ratio","Placement Fee"], answer: "Time to Fill" } ] }
+            },
+            {
+                id: 4,
+                title: "Module 4: Staffing Verticals & Challenges",
+                content: `
+                    <h3 class="text-2xl font-semibold mb-4">A Comprehensive Guide to Staffing Specializations</h3>
+                    <p class="mb-4">Not all staffing is the same. Firms often specialize in "verticals" or specific industries. Understanding these differences is key to speaking intelligently about how Carv can help. Each vertical has unique roles, candidate pools, and hiring challenges.</p>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="text-xl font-semibold mt-6 mb-3">Information Technology (IT)</h4>
+                            <p class="mb-2"><strong>Common Roles:</strong> Software Developers, Network Engineers, Cybersecurity Analysts, Project Managers, Data Scientists.</p>
+                            <p class="text-gray-700"><strong>Unique Hiring Challenges:</strong></p>
+                            <ul class="list-disc pl-5 space-y-1 text-sm">
+                                <li><strong>Fierce Competition:</strong> Top tech talent is in extremely high demand and often has multiple job offers. Speed is critical.</li>
+                                <li><strong>Technical Screening:</strong> Recruiters must be able to accurately assess complex technical skills, which can be a huge bottleneck.</li>
+                                <li><strong>Passive Candidates:</strong> The best candidates are often not actively looking for jobs. Recruiters need to be experts at sourcing and outreach.</li>
+                            </ul>
+                            <p class="mt-2 text-sm text-blue-700"><strong>Carv's Angle:</strong> In IT, speed wins. Carv gives recruiters an unfair advantage by eliminating admin. It takes notes during complex technical screens, instantly updates the ATS, and generates candidate write-ups in seconds. It also turns a firm's existing ATS into a goldmine by automatically rediscovering and engaging past candidates for new roles, maximizing the value of their talent pool.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mt-6 mb-3">Accounting & Finance</h4>
+                            <p class="mb-2"><strong>Common Roles:</strong> Staff Accountants, Financial Analysts, Controllers, Auditors, Payroll Specialists.</p>
+                            <p class="text-gray-700"><strong>Unique Hiring Challenges:</strong></p>
+                            <ul class="list-disc pl-5 space-y-1 text-sm">
+                                <li><strong>Certifications Matter:</strong> Roles often require specific certifications (CPA, CFA), which narrows the talent pool significantly.</li>
+                                <li><strong>Cyclical Demand:</strong> Hiring often peaks during tax season or year-end financial reporting, creating high-pressure, high-volume needs.</li>
+                                <li><strong>Attention to Detail:</strong> Finding candidates with the right blend of technical skill and meticulous attention to detail is tough.</li>
+                            </ul>
+                            <p class="mt-2 text-sm text-blue-700"><strong>Carv's Angle:</strong> When seasonal demand spikes, recruiters are buried in admin. Carv takes over, automating note-taking and instantly generating candidate summaries that highlight key certifications (like CPA). This allows recruiters to engage more candidates and submit them faster, helping the firm capture peak season revenue without burning out their team.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mt-6 mb-3">Healthcare</h4>
+                            <p class="mb-2"><strong>Common Roles:</strong> Registered Nurses (RNs), Licensed Practical Nurses (LPNs), Medical Assistants, Allied Health Professionals (e.g., Radiologic Technologists), Healthcare Administrators.</p>
+                            <p class="text-gray-700"><strong>Unique Hiring Challenges:</strong></p>
+                            <ul class="list-disc pl-5 space-y-1 text-sm">
+                                <li><strong>Strict Credentialing:</strong> State licenses and certifications are non-negotiable and complex to verify.</li>
+                                <li><strong>High Burnout & Turnover:</strong> The field has high turnover, creating constant replacement needs.</li>
+                                <li><strong>Urgent/Per Diem Needs:</strong> Hospitals need staff for specific shifts, sometimes with only a few hours' notice.</li>
+                            </ul>
+                            <p class="mt-2 text-sm text-blue-700"><strong>Carv's Angle:</strong> Healthcare staffing is a 24/7 job. Carv's conversational AI acts as a round-the-clock assistant, engaging candidates for urgent per diem shifts via text and scheduling them automatically. For every interaction, Carv handles the admin by updating the ATS, freeing recruiters from constant data entry so they can focus on candidate relationships and credential management.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mt-6 mb-3">Light Industrial</h4>
+                            <p class="mb-2"><strong>Common Roles:</strong> Warehouse Associates, Forklift Operators, Assembly Line Workers, General Laborers.</p>
+                            <p class="text-gray-700"><strong>Unique Hiring Challenges:</strong></p>
+                            <ul class="list-disc pl-5 space-y-1 text-sm">
+                                <li><strong>High Volume, Low Margin:</strong> Firms need to place a large number of people to be profitable. Efficiency is paramount.</li>
+                                <li><strong>High Turnover:</strong> "No call, no shows" are common. Recruiters are constantly backfilling positions.</li>
+                                <li><strong>Logistics & Scheduling:</strong> Managing shifts, locations, and a large pool of temporary workers is a major logistical challenge.</li>
+                            </ul>
+                             <p class="mt-2 text-sm text-blue-700"><strong>Carv's Angle:</strong> This vertical is an efficiency game. Carv's conversational AI ("Zero Handling") manages the high-volume screening and scheduling of workers via chat and voice agents. This drastically reduces the time recruiters spend on repetitive coordination, allowing them to manage larger talent pools and backfill no-shows instantly, directly protecting the firm's revenue.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mt-6 mb-3">Administrative & Clerical</h4>
+                            <p class="mb-2"><strong>Common Roles:</strong> Executive Assistants, Administrative Assistants, Receptionists, Data Entry Clerks, Office Managers.</p>
+                            <p class="text-gray-700"><strong>Unique Hiring Challenges:</strong></p>
+                            <ul class="list-disc pl-5 space-y-1 text-sm">
+                                <li><strong>Soft Skills are Key:</strong> Assessing personality fit, communication, and organizational skills is difficult to automate.</li>
+                                <li><strong>High Volume of Applicants:</strong> Popular roles can get hundreds of applicants, overwhelming recruiters.</li>
+                                <li><strong>Varying Client Needs:</strong> Every office has a different culture and specific software needs (e.g., MS Office vs. Google Suite).</li>
+                            </ul>
+                            <p class="mt-2 text-sm text-blue-700"><strong>Carv's Angle:</strong> Recruiters get flooded with applicants for these roles. Carv's AI pre-screens candidates for baseline skills and then automates all note-taking during interviews. This frees the recruiter to truly listen and assess soft skills and culture fit, rather than typing. After the call, Carv instantly generates summaries for the ATS, turning hours of admin into seconds.</p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-semibold mt-6 mb-3">Creative & Marketing</h4>
+                            <p class="mb-2"><strong>Common Roles:</strong> Graphic Designers, UX/UI Designers, Copywriters, Marketing Managers, Social Media Specialists.</p>
+                            <p class="text-gray-700"><strong>Unique Hiring Challenges:</strong></p>
+                            <ul class="list-disc pl-5 space-y-1 text-sm">
+                                <li><strong>Portfolio Reviews:</strong> Assessing subjective skills through portfolios is extremely time-consuming.</li>
+                                <li><strong>Project-Based Work:</strong> Demand fluctuates wildly based on client projects, requiring a deep bench of freelance talent.</li>
+                                <li><strong>Niche Skills:</strong> Finding a designer who specializes in a specific style or a marketer with experience in a niche industry is hard.</li>
+                            </ul>
+                            <p class="mt-2 text-sm text-blue-700"><strong>Carv's Angle:</strong> A great portfolio review is a conversation, not an admin task. Carv takes notes while the recruiter engages with the candidate about their creative work, capturing key details and feedback. It then uses its "Talentpool AI" to continuously engage the firm's bench of freelancers, matching their skills to new projects and ensuring no valuable talent goes to waste.</p>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mt-6 mb-3">Executive Search</h4>
+                            <p class="mb-2"><strong>Common Roles:</strong> C-Suite (CEO, CFO, COO), Vice Presidents, Board Members.</p>
+                            <p class="text-gray-700"><strong>Unique Hiring Challenges:</strong></p>
+                            <ul class="list-disc pl-5 space-y-1 text-sm">
+                                <li><strong>Extreme Discretion:</strong> Searches are highly confidential. Publicly posting a "CEO" role is not an option.</li>
+                                <li><strong>Entirely Passive Candidates:</strong> The target candidates are successful executives who are not looking for a job.</li>
+                                <li><strong>"White Glove" Service:</strong> Requires a high-touch, personal approach. Mass outreach is ineffective and damaging.</li>
+                            </ul>
+                            <p class="mt-2 text-sm text-blue-700"><strong>Carv's Angle:</strong> Executive search is a zero-error, high-touch process. Carv enhances this "white glove" service by automating the background admin. It acts as a perfect AI assistant, taking flawless notes during confidential client briefings and candidate discussions, automatically updating the CRM, and generating summaries for client reports. This frees partners from all administrative work to focus entirely on strategy, assessment, and building critical relationships.</p>
+                        </div>
+                    </div>
+                `,
+                quiz: { title: "Module 4 Quiz", questions: [ { question: "Which staffing vertical is characterized by high-volume placements and high turnover?", options: ["Information Technology (IT)","Accounting & Finance","Light Industrial","Executive Search"], answer: "Light Industrial" }, { question: "In which vertical is it most critical to screen for specific certifications like a CPA?", options: ["Information Technology (IT)","Accounting & Finance","Light Industrial","Creative & Marketing"], answer: "Accounting & Finance" }, { question: "A staffing firm's biggest challenge is the time it takes to review creative portfolios. Which vertical are they in?", options: ["Administrative","Healthcare","Light Industrial","Creative & Marketing"], answer: "Creative & Marketing" }, { question: "Verifying state licenses and managing on-call schedules for urgent needs are primary challenges in which vertical?", options: ["Executive Search","Healthcare","IT","Accounting & Finance"], answer: "Healthcare" } ] }
+            },
+            {
+                id: 5,
+                title: "Module 5: The Staffing Tech Stack",
+                content: `
+                    <h3 class="text-2xl font-semibold mb-4">Understanding the Tools of the Trade</h3>
+                    <p class="mb-4">Staffing firms rely on a variety of software to run their business. Knowing this "tech stack" helps you understand their daily workflow, identify pain points, and speak intelligently about how Carv integrates and improves their processes. If a recruiter mentions a tool, you should know what it is.</p>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="text-xl font-semibold mt-6 mb-3">Applicant Tracking Systems (ATS) & CRMs</h4>
+                            <p class="mb-2">This is the heart of any staffing firm. It's their central database for candidates, clients, job orders, and all communication. The line between ATS (managing candidates) and CRM (managing clients) is often blurred in staffing-specific software.</p>
+                            <p class="text-gray-700"><strong>Top 10 Players:</strong></p>
+                            <ol class="list-decimal pl-5 space-y-1 text-sm">
+                                <li><strong>Bullhorn:</strong> The undisputed market leader, especially for larger firms. You will hear this name constantly.</li>
+                                <li><strong>Zoho Recruit:</strong> A popular choice for small to mid-sized firms, known for its customizability.</li>
+                                <li><strong>Recruit CRM:</strong> A modern, user-friendly platform gaining traction with SMBs.</li>
+                                <li><strong>Crelate:</strong> A flexible platform that combines ATS, recruiting CRM, and business development tools.</li>
+                                <li><strong>JobDiva:</strong> A powerful platform known for its patented search technology.</li>
+                                <li><strong>Loxo:</strong> An all-in-one talent intelligence platform with strong sourcing capabilities.</li>
+                                <li><strong>Vincere:</strong> A comprehensive platform for recruitment agencies of all sizes.</li>
+                                <li><strong>Avionté:</strong> An end-to-end staffing software solution, strong in temporary staffing.</li>
+                                <li><strong>TempWorks:</strong> A major player in the temporary staffing software space.</li>
+                                <li><strong>CEIPAL:</strong> Known for its AI-driven features and focus on efficiency.</li>
+                            </ol>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mt-6 mb-3">VoIP (Voice over IP) Systems</h4>
+                            <p class="mb-2">Recruiting is a phone-heavy business. VoIP systems allow recruiters to make calls over the internet, providing flexibility, call recording, and integration with their ATS/CRM.</p>
+                            <p class="text-gray-700"><strong>Top 10 Players:</strong></p>
+                            <ol class="list-decimal pl-5 space-y-1 text-sm">
+                                <li>RingCentral</li>
+                                <li>Nextiva</li>
+                                <li>8x8</li>
+                                <li>Dialpad</li>
+                                <li>GoTo Connect</li>
+                                <li>Vonage</li>
+                                <li>Zoom Phone</li>
+                                <li>Ooma Office</li>
+                                <li>Intermedia Unite</li>
+                                <li>CloudTalk</li>
+                            </ol>
+                        </div>
+
+                        <div>
+                            <h4 class="text-xl font-semibold mt-6 mb-3">Office & Productivity Suites</h4>
+                            <p class="mb-2">These are the fundamental tools for email, calendars, and document creation.</p>
+                             <ul class="list-disc pl-5 space-y-1 text-sm">
+                                <li><strong>Microsoft 365 (formerly Office 365):</strong> The enterprise standard. Outlook, Teams, Word, and Excel run the back office of most firms.</li>
+                                <li><strong>Google Workspace:</strong> Very common, especially with smaller or more modern firms. Gmail, Google Calendar, Docs, and Sheets are central to their workflow.</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h4 class="text-xl font-semibold mt-6 mb-3">AI & Automation Tools (Carv's Competitors)</h4>
+                            <p class="mb-2">This is our space! These tools aim to make recruiting more efficient. They range from conversational AI chatbots to sourcing automation platforms. Understanding them helps you differentiate Carv.</p>
+                            <p class="text-gray-700"><strong>Top 10 Players:</strong></p>
+                             <ol class="list-decimal pl-5 space-y-1 text-sm">
+                                <li><strong>Paradox (Olivia):</strong> A leader in conversational AI for high-volume hiring and scheduling.</li>
+                                <li><strong>hireEZ (formerly Hiretual):</strong> A strong AI-powered sourcing platform to find talent.</li>
+                                <li><strong>Sense:</strong> Focuses on candidate engagement through texting and automation.</li>
+                                <li><strong>Phenom:</strong> An AI-powered "Talent Experience Management" platform.</li>
+                                <li><strong>Eightfold AI:</strong> A deep learning talent intelligence platform.</li>
+                                <li><strong>Humanly:</strong> Conversational AI for screening and scheduling candidates.</li>
+                                <li><strong>Gem:</strong> A sourcing and CRM platform that works on top of an ATS.</li>
+                                <li><strong>Sourcewhale:</strong> An automation platform focused on personalized outreach.</li>
+                                <li><strong>heyMilo:</strong> An AI copilot for recruiters that assists with summaries and outreach.</li>
+                                <li><strong>Jack and Jill AI:</strong> An AI sourcing and outreach platform.</li>
+                            </ol>
+                        </div>
+                        <p class="mt-8 text-sm text-blue-700 font-semibold"><strong>Carv's Angle:</strong> Knowing their tech stack is your secret weapon. You can say, "I see you use Bullhorn. Carv integrates seamlessly to eliminate all the manual note-taking and data entry your recruiters are doing, letting them live in Bullhorn while Carv handles the admin." This shows you've done your homework and understand their world.</p>
+                    </div>
+                `,
+                quiz: { title: "Module 5 Quiz", questions: [ { question: "Which company is widely considered the market leader for Staffing ATS/CRM software?", options: ["Salesforce","Bullhorn","Workday","Microsoft Dynamics"], answer: "Bullhorn" }, { question: "A recruiter mentions they spend all day on the phone using a system that lets them record calls and text candidates. What type of tool are they describing?", options: ["An Office Suite","An ATS (Applicant Tracking System)","A VoIP System","A Project Management Tool"], answer: "A VoIP System" }, { question: "Which of the following is a direct competitor to Carv in the AI recruitment automation space?", options: ["Microsoft Word","RingCentral","Paradox (Olivia)","Zoho"], answer: "Paradox (Olivia)" } ] }
+            }
+        ];
+
+        let currentModuleId = 1;
+        let progress = {}; // { moduleId: score }
+
+        const contentArea = document.getElementById('content-area');
+        const moduleList = document.getElementById('module-list');
+
+        function renderModule(moduleId) {
+            const module = lmsData.find(m => m.id === moduleId);
+            if (!module) return;
+
+            currentModuleId = moduleId;
+            
+            let html = `
+                <div class="bg-white shadow-md rounded-lg p-6 module-content">
+                    ${module.content}
+                    <div class="mt-8 border-t pt-6">
+                        <button onclick="renderQuiz(${moduleId})" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300" aria-label="Start quiz for ${module.title}">
+                            Start Quiz for ${module.title}
+                        </button>
+                    </div>
+                </div>
+            `;
+            contentArea.innerHTML = html;
+            updateModuleNav();
+            const firstHeading = contentArea.querySelector('h3, h2, h1');
+            if (firstHeading) firstHeading.focus({ preventScroll: true });
+        }
+
+        function renderQuiz(moduleId) {
+            const module = lmsData.find(m => m.id === moduleId);
+            if (!module || !module.quiz) return;
+
+            let questionsHtml = module.quiz.questions.map((q, index) => {
+                let optionsHtml = q.options.map(option => `
+                    <label class="block p-3 my-2 rounded-lg border border-gray-200 hover:bg-gray-50 cursor-pointer">
+                        <input type="radio" name="question-${index}" value="${option}" class="mr-3">
+                        ${option}
+                    </label>
+                `).join('');
+                return `
+                    <div class="mb-6">
+                        <p class="font-semibold mb-2">${index + 1}. ${q.question}</p>
+                        <div class="space-y-2">${optionsHtml}</div>
+                    </div>
+                `;
+            }).join('');
+
+            let html = `
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <h2 class="text-2xl font-bold mb-6">${module.quiz.title}</h2>
+                    <form id="quiz-form">
+                        ${questionsHtml}
+                        <div class="mt-8 border-t pt-6">
+                            <button type="submit" class="bg-green-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-green-700 transition duration-300">
+                                Submit Answers
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            `;
+            contentArea.innerHTML = html;
+
+            document.getElementById('quiz-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                submitQuiz(moduleId);
+            });
+        }
+        
+        function submitQuiz(moduleId) {
+            const module = lmsData.find(m => m.id === moduleId);
+            const form = document.getElementById('quiz-form');
+            let score = 0;
+            const totalQuestions = module.quiz.questions.length;
+
+            module.quiz.questions.forEach((q, index) => {
+                const selectedOption = form.querySelector(`input[name="question-${index}"]:checked`);
+                if (selectedOption && selectedOption.value === q.answer) {
+                    score++;
+                }
+            });
+
+            progress[moduleId] = { score, total: totalQuestions };
+            renderQuizResults(moduleId, score, totalQuestions);
+            updateModuleNav();
+        }
+
+        function renderQuizResults(moduleId, score, totalQuestions) {
+            const percentage = Math.round((score / totalQuestions) * 100);
+            const nextModule = lmsData.find(m => m.id === moduleId + 1);
+
+            let resultMessage;
+            if (percentage >= 80) {
+                 resultMessage = `<h3 class="text-2xl font-bold text-green-700">Excellent Work!</h3><p class="text-gray-600 mt-2">You have a great grasp of the material.</p>`;
+            } else {
+                 resultMessage = `<h3 class="text-2xl font-bold text-orange-600">Good Start!</h3><p class="text-gray-600 mt-2">You're on your way. Feel free to review the module and retake the quiz.</p>`;
+            }
+
+            let nextStepHtml = '';
+            if (nextModule) {
+                nextStepHtml = `<button onclick="renderModule(${nextModule.id})" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300 mt-4" aria-label="Proceed to next module">Proceed to Next Module</button>`;
+            } else {
+                nextStepHtml = `<p class="text-green-600 font-semibold mt-4">Congratulations! You have completed all modules.</p>`;
+            }
+
+            const html = `
+                 <div class="bg-white shadow-md rounded-lg p-8 text-center">
+                    ${resultMessage}
+                    <div class="my-6 text-4xl font-bold text-gray-800">${score} / ${totalQuestions}</div>
+                    <p class="text-xl text-gray-700">You scored ${percentage}%</p>
+                    <div class="mt-6">
+                        <button onclick="renderModule(${moduleId})" class="bg-gray-300 text-gray-800 font-bold py-2 px-6 rounded-lg hover:bg-gray-400 transition duration-300 mr-2">Review Module</button>
+                        ${nextStepHtml}
+                    </div>
+                </div>
+            `;
+
+            contentArea.innerHTML = html;
+        }
+
+
+        function updateModuleNav() {
+            moduleList.innerHTML = lmsData.map(module => {
+                const isCurrent = module.id === currentModuleId;
+                const moduleProgress = progress[module.id];
+                let progressText = '';
+                let completedClass = '';
+
+                if (moduleProgress) {
+                    progressText = ` <span class="text-sm ml-2 p-1 rounded ${moduleProgress.score / moduleProgress.total >= 0.8 ? 'bg-green-100 text-green-800' : 'bg-orange-100 text-orange-800'}">(${moduleProgress.score}/${moduleProgress.total})</span>`;
+                    if(moduleProgress.score / moduleProgress.total >= 0.8) completedClass = 'font-semibold text-green-700';
+                }
+
+                return `
+                    <li>
+                        <a href="#" onclick="renderModule(${module.id}); return false;" 
+                           class="block p-3 rounded-lg transition duration-200 ${isCurrent ? 'bg-blue-100 text-blue-800 font-bold' : 'hover:bg-gray-100'} ${completedClass}" aria-current="${isCurrent ? 'true' : 'false'}">
+                            ${module.title} ${progressText}
+                        </a>
+                    </li>
+                `;
+            }).join('');
+        }
+
+        // Initial load
+        renderModule(1);
+    </script>
+
+</body>
+</html>
